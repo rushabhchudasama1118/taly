@@ -21,12 +21,13 @@ define(
                 'redirectAfterPlaceOrder': false,
                 'template': 'Taly_Taly/payment/taly',
                 'selectedServiceJson' : ko.observable(0),
-                'talypaySelectedService':ko.observable(true),
+                'talypaySelectedService':ko.observable(false),
                 'serviceCounter' : 0
             },
             talypayTermsChecked: ko.observable(false),
             selectedServiceCheck: ko.observable('Pay Later'),
             selectedServiceClick : function (data,event) {
+                console.log(data.service_code);
                 var service_data={"service_code":data.service_code,"service_type":data.service_type};
                 jQuery('.detailbox div').hide();
                 var main_id = '.detailbox .'+service_data.service_type+' div';
@@ -39,6 +40,11 @@ define(
                     $.mage.cookies.set('selected_service',JSON.stringify(service_data));
                     this.talypaySelectedService(true);
                 }
+                if (data.service_type == 'UNPROCESSABLE_ENTITY') {
+                    // this.selectedServiceCheck('UNPROCESSABLE_ENTITY')
+                    this.talypaySelectedService(false);
+                }
+
             },
             getTitle: function () {
                 return window.checkoutConfig.payment.taly.title;
@@ -55,6 +61,10 @@ define(
             },*/
 
             gettalypayAvailableService: function() {
+                console.log("2");
+
+                this.talypaySelectedService(false);
+
                 let zas = window.checkoutConfig.payment.taly.talypayAvailableService;
                 for (var i = 0; i < zas.length; ++i) {
                     if (zas[i]['service_installment_bool']) {

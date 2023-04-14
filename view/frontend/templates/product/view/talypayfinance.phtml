@@ -1,7 +1,10 @@
 <?php
 $zDataHelper = $this->helper('Taly\Taly\Helper\Data');
 $showProduct = $zDataHelper->getConfigData($zDataHelper::XML_DISPLAY_INFO_PRODUCTPAGE);
-if ($showProduct):
+$product_price= $zDataHelper->getProduct()->getFinalPrice();
+$fetchConfigResponse = $zDataHelper->curlPaymentProduct($product_price);
+file_put_contents(BP.'/var/log/getdatataly.log', ' ::DATAaeeeeeeee:: '.print_r(($fetchConfigResponse),true).PHP_EOL,FILE_APPEND);
+if ($showProduct && !empty($fetchConfigResponse['response'])):
     $currencySymbol = $zDataHelper->getCurrentCurrencyCode();
     $product_price= $zDataHelper->getProduct()->getFinalPrice();
     $fetchConfigResponse = $zDataHelper->curlPaymentProduct($product_price);

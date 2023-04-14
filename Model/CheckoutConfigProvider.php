@@ -76,26 +76,42 @@ class CheckoutConfigProvider implements ConfigProviderInterface
 
         $accessTokens = $this->_zDataHelper->accessToken();
         $fetchConfigResponse = $this->getPlan($accessTokens->access_token) ?? [];
-	        file_put_contents(BP . '/var/log/getdata2.log', ' ::DATA:: ' . print_r($fetchConfigResponse, true) . PHP_EOL, FILE_APPEND);
-
-	$k = 0;
+        $k = 0;
         $planEmi = [];
         $availableServiceResult = [];
-        for ($i = 0, $iMax = count($fetchConfigResponse) ?? 0; $i < $iMax; $i++) {
-            $planEmi = $this->_zDataHelper->getCalculatedInstallmentForPaymentPlans($fetchConfigResponse[$i]->{'id'}, $accessTokens->access_token, $quoteTotal, $currencycode);
-            $availableServiceResult[$k] = [
-                'id' => $fetchConfigResponse[$i]->{'id'},
-                "service_code" => $fetchConfigResponse[$i]->{'name'},
+        // file_put_contents(BP . '/var/log/talysuccess1.log', ' ::gettalypayAvailableService:: ' . print_r(json_decode(json_encode($fetchConfigResponse,1),1), true) . PHP_EOL, FILE_APPEND);
+        // $fetchConfigResponse = json_decode(json_encode($fetchConfigResponse,1),1);
+        if (isset($fetchConfigResponse->{'status'}) && $fetchConfigResponse->{'status'} == 'UNPROCESSABLE_ENTITY') {
+            $availableServiceResult[0] = [
+                'id' => $fetchConfigResponse->{'status'},
+                "service_code" => $fetchConfigResponse->{'message'},
                 "total" => $quoteTotal,
-                "plan_emi" => $planEmi,
-                "monthsPeriod" => $fetchConfigResponse[$i]->{'monthsPeriod'},
+                "plan_emi" => [],
+                "monthsPeriod" => 0,
                 "service_installment_bool" => true,
-                "service_type" => $fetchConfigResponse[$i]->{'id'},
+                "service_type" => $fetchConfigResponse->{'status'},
                 "service_monthly_text" => $quoteTotal,
             ];
-            $k++;
+        } else {
+            for ($i = 0, $iMax = count($fetchConfigResponse) ?? 0; $i < $iMax; $i++) {
+                $planEmi = $this->_zDataHelper->getCalculatedInstallmentForPaymentPlans($fetchConfigResponse[$i]->{'id'}, $accessTokens->access_token, $quoteTotal, $currencycode);
+                $availableServiceResult[$k] = [
+                    'id' => $fetchConfigResponse[$i]->{'id'},
+                    "service_code" => $fetchConfigResponse[$i]->{'name'},
+                    "total" => $quoteTotal,
+                    "plan_emi" => $planEmi,
+                    "monthsPeriod" => $fetchConfigResponse[$i]->{'monthsPeriod'},
+                    "service_installment_bool" => true,
+                    "service_type" => $fetchConfigResponse[$i]->{'id'},
+                    "service_monthly_text" => $quoteTotal,
+                ];
+                $k++;
+            }
         }
-        file_put_contents(BP . '/var/log/getdata2.log', ' ::DATA:: ' . print_r($availableServiceResult, true) . PHP_EOL, FILE_APPEND);
+        // unset($availableServiceResult[1]);
+        // unset($availableServiceResult[0]['plan_emi']);
+        file_put_contents(BP . '/var/log/talysuccess1.log', ' ::gettalypayAvailableService:: ' . print_r($availableServiceResult, true) . PHP_EOL, FILE_APPEND);
+        // $availableServiceResult[0]['plan_emi'] = [];
 
         return $availableServiceResult;
     }
@@ -125,6 +141,7 @@ class CheckoutConfigProvider implements ConfigProviderInterface
         ));
 
         $response = curl_exec($curl);
+        file_put_contents(BP.'/var/log/talysuccess1.log', ' ::getPlan:: '.print_r($response,true).PHP_EOL,FILE_APPEND);
 
         return json_decode($response);
     }

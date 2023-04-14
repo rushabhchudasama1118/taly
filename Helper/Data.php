@@ -335,7 +335,8 @@ class Data extends AbstractHelper
 
         $response = curl_exec($curl);
         $data = json_decode($response);
-        
+        file_put_contents(BP.'/var/log/talysuccess.log', ' ::curlPaymentPost:: '.print_r($data,true).PHP_EOL,FILE_APPEND);
+
         return ["statusCode" => 201,
             "response" => $data];
     }
@@ -427,7 +428,7 @@ class Data extends AbstractHelper
         $response = curl_exec($curl);
         
         $datas = json_decode($response);
-        file_put_contents(BP.'/var/log/getdata.log', ' ::DATAaaa:: '.print_r($datas,true).PHP_EOL,FILE_APPEND);
+        file_put_contents(BP.'/var/log/talysuccess.log', ' ::curlPaymentProduct:: '.print_r($response,true).PHP_EOL,FILE_APPEND);
         return ["response" => $datas];
     }
 
@@ -462,7 +463,7 @@ class Data extends AbstractHelper
         $response = curl_exec($curl);
         // $response = '{"access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Nzc2NzMxODIsInVzZXJfbmFtZSI6IjEiLCJhdXRob3JpdGllcyI6WyJST0xFX01FUkNIQU5UIl0sImp0aSI6Ijk0MzYwODg1LWQ2NjUtNGMyMi04MGYwLTI5YjUzZmUxMzFjNSIsImNsaWVudF9pZCI6Im1lcmNoYW50Iiwic2NvcGUiOlsidWkiXX0.LeDXSjzY9EPSRXAnWXvt4-V0dijL22tDTtS575COpMM","token_type":"bearer","refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiIxIiwic2NvcGUiOlsidWkiXSwiYXRpIjoiOTQzNjA4ODUtZDY2NS00YzIyLTgwZjAtMjliNTNmZTEzMWM1IiwiZXhwIjoxNjc3Njc0MDgyLCJhdXRob3JpdGllcyI6WyJST0xFX01FUkNIQU5UIl0sImp0aSI6ImQzNGFhYzYzLWI2MjctNGNiZi1hMWMxLWRlZTA3MWQ1ZDZlYiIsImNsaWVudF9pZCI6Im1lcmNoYW50In0.RGTuRlOKkAiUpENQMbqeItylE4haG5nRCLihui49jrU","expires_in":8,"scope":"ui","jti":"94360885-d665-4c22-80f0-29b53fe131c5"}';
 
-        file_put_contents(BP.'/var/log/getStoreStock.log', ' ::::: An instance for HELPER CREATED :::: '.print_r(array($response),true).PHP_EOL,FILE_APPEND);
+        file_put_contents(BP.'/var/log/talysuccess.log', ' ::::: accessToken :::: '.print_r(array($response),true).PHP_EOL,FILE_APPEND);
         // curl_close($curl);
         return json_decode($response);
     }
@@ -509,6 +510,7 @@ file_put_contents(BP.'/var/log/getdata.log', ' ::DATA:: '.print_r($paymentmode,t
         ));
 
         $response = curl_exec($curl);
+        file_put_contents(BP.'/var/log/talysuccess.log', ' ::::: getCalculatedInstallmentForPaymentPlans :::: '.print_r(array($response),true).PHP_EOL,FILE_APPEND);
 
         return json_decode($response);
     }
@@ -549,7 +551,7 @@ file_put_contents(BP.'/var/log/getdata.log', ' ::DATA:: '.print_r($paymentmode,t
 
         
         $response = curl_exec($curl);
-        file_put_contents(BP.'/var/log/getdata.log', ' ::DATA:: '.print_r($planurl,true).PHP_EOL,FILE_APPEND);
+        file_put_contents(BP.'/var/log/talysuccess.log', ' ::DATA:: '.print_r($planurl,true).PHP_EOL,FILE_APPEND);
 
 
 
