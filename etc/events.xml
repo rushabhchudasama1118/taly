@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @category    Taly
+* @package     Talypay_Talypay
+* @copyright Copyright © 2020 Taly TalyPay. All rights reserved.
+* @author    
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="admin_system_config_changed_section_payment">
+        <observer name="custom_admin_system_config_changed_section_payment" instance="Taly\Taly\Observer\ConfigObserver"/>
+    </event>
+    <event name="sales_order_place_after">
+        <observer name="place_order_after" instance="Taly\Taly\Observer\OrderPlaceAfter"/>
+    </event>
+</config>

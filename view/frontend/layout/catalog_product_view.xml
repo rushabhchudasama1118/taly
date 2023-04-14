@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+   <head>
+        <css src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" src_type="url"/>
+        <css src="Taly_Taly::css/taly.css"/>
+    </head>
+    <body>
+       <referenceContainer name="content">
+            <block name="product.info.taly.pay" after="product.info.addtocart" as="custom" template="Taly_Taly::product/view/talypayfinance.phtml" />
+        </referenceContainer>
+        <move element="product.info.taly.pay" destination="product.info.addto" before="view.addto.wishlist"/>
+    </body>
+</page>

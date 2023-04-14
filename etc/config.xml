@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <payment>
+            <taly>
+                <payment_action>authorize</payment_action> <!-- You can use another method like authorize,capture etc.  -->
+                <model>Taly\Taly\Model\PaymentMethod</model>
+                <active>1</active>
+                <title>Taly Taly</title>
+                <order_status>new</order_status> <!-- Set your default order status -->
+                <order_status>new</order_status><!-- set default order status-->
+                <merchant_id backend_model="Magento\Config\Model\Config\Backend\Encrypted" />
+                <merchant_key backend_model="Magento\Config\Model\Config\Backend\Encrypted" />
+                <merchant_status>Deactivate, Check The Provided Credentials And API link</merchant_status>
+                <merchant_token>0</merchant_token>
+                <merchant_salt>0</merchant_salt>
+                <talypay_api_url>0</talypay_api_url>
+                <talypay_api_ver>0</talypay_api_ver>
+                <talypay_tc_url>0</talypay_tc_url>
+                <talypay_api_health>TalyPay API is down</talypay_api_health>
+                <talypay_api_health_hidden>0</talypay_api_health_hidden>
+                <allowspecific>0</allowspecific>
+                <gateway_title>TalyPay Buy Now Pay Later</gateway_title>
+                <min_order_total>0</min_order_total>
+            </taly>
+        </payment>
+    </default>
+</config>

@@ -1,0 +1,45 @@
+TERMS_CONDITIONS,(Terms and Conditions),module,talypay_talypay
+OF,of,module,talypay_talypay
+PLACE_ORDER,Place Order,module,talypay_talypay
+PLACE_ORDER_WITH_Talypay,Place Order With Talypay,module,talypay_talypay
+TERMS_CONDITIONS_OF,Terms and Condition of,module,talypay_talypay
+PROCESSING_ERROR,An Error occurred while processing your request. Kindly contact the Administrator,module,talypay_talypay
+PLACING_ORDER_ERROR,The Error Happened During placing the order Via Talypay Gateway,module,talypay_talypay
+PAYMENT_ACCEPTED,The Payment Details Accepted and collected for the current Order,module,talypay_talypay
+PAYMENT_CANCELLED,The Payment Cancelled for the current Order ,module,talypay_talypay
+PAYMENT_FAILED,The Payment Failed for the current Order ,module,talypay_talypay
+PAYMENT_NOT_ACCEPTED,The Payment Not Accepted and The provided details are not correct for the current Order ,module,talypay_talypay
+BUY_NOW_PAY_LATER,TalyPay Buy Now Pay Later,module,talypay_talypay
+Talypay_TERMS_CONDITIONS,Talypay Terms and Conditions,module,talypay_talypay
+FINANCE_OPTION,Select Your Finance Option,module,talypay_talypay
+ENABLE,Enable,module,talypay_talypay
+MERCHANT_STATUS,Merchant Status,module,talypay_talypay
+Merchant Key,Merchant Key,module,talypay_talypay
+Merchant Secret,Merchant Secret,module,talypay_talypay
+Merchant salt,Merchant salt,module,talypay_talypay
+Talypay_API_URL,Talypay API URL,module,talypay_talypay
+Talypay_API_VERSION,Talypay API Version,module,talypay_talypay
+Talypay_TC_URL,Talypay TC URL,module,talypay_talypay
+Talypay_API_HEALTH,Talypay Api HEALTH,module,talypay_talypay
+HEALTH_CHECK,Health Check,module,talypay_talypay
+DISPLAY_ON_PRODUCT_PAGE,Display Info on Product Detail Page,module,talypay_talypay
+GATEWAY_UNDER_NAME,Gateway Available Under Name,module,talypay_talypay
+APPLICABLE_COUNTRIES,Payment from Applicable Countries,module,talypay_talypay
+SPECIFIC_COUNTRIES,Payment from Specific Countries,module,talypay_talypay
+SORT_ORDER,Sort Order,module,talypay_talypay
+CHECKBOX_MSG,Checked means that Talypay Payment Gateway Will be Shown on the Product Page.,module,talypay_talypay
+HEALTHY_API,Talypay API is healthy,module,talypay_talypay
+API_DOWN,Talypay API is down,module,talypay_talypay
+FETCH_CONFIGURATION,Fetch Configurations,module,talypay_talypay
+Specific Countries,Select Countries,module,talypay_talypay
+Yes,Yes,module,talypay_talypay
+No,No,module,talypay_talypay
+ERROR_PAGE,Error Page,module,talypay_talypay
+SUCCESS_PAGE,Success Page,module,talypay_talypay
+INVALID_API_LINK,Deactivate Due To: Provided API Link is not Valid,module,talypay_talypay
+CHECK_API_LINK_CREDENTIALS,"Deactivate, Check The Provided Credentials And API link",module,talypay_talypay
+INVALID_API_CREDENTIALS,Deactivate Due To: Check The Provided Credentials,module,talypay_talypay
+ACTIVE_OPERATE,Active And Available to Operate,module,talypay_talypay
+RELOAD_PAGE,We are Checking the Status \n The page will be reloaded now,module,talypay_talypay
+MONTHLY,Monthly,module,talypay_talypay
+AVAILABLE_FINANCE_OPTIONS,Finance options available,module,talypay_talypay

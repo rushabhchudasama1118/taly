@@ -1,0 +1,112 @@
+<?php
+$zDataHelper = $this->helper('Taly\Taly\Helper\Data');
+$showProduct = $zDataHelper->getConfigData($zDataHelper::XML_DISPLAY_INFO_PRODUCTPAGE);
+if ($showProduct):
+    $currencySymbol = $zDataHelper->getCurrentCurrencyCode();
+    $product_price= $zDataHelper->getProduct()->getFinalPrice();
+    $fetchConfigResponse = $zDataHelper->curlPaymentProduct($product_price);
+    file_put_contents(BP.'/var/log/getdata.log', ' ::DATA:: '.print_r(count($fetchConfigResponse),true).PHP_EOL,FILE_APPEND);
+
+    $catimg = $block->getViewFileUrl('Taly_Taly::images/logo.svg');
+    ?>
+<div class='finance-talypay-box'>
+    <?php
+    for ($i = 0, $iMax = count($fetchConfigResponse); $i < $iMax; $i++) {
+        $installment = count((array)$fetchConfigResponse['response']);
+        $monthlyPayment = $fetchConfigResponse['response'][$iMax]->amount;
+        ?>
+    <div class="pdp-option">
+        <!-- <div class="pdp-optiontext">
+            <h4 style='float:left;'>Split into  <?= /* @noEscape */ $installment ?> payments of <?= /* @noEscape */ $currencySymbol ?> <?= /* @noEscape */ $monthlyPayment ?>  interest-free. <a class="example-icon-14" href="#popup$i">Tell me more</a>
+            </h4>
+        </div>
+        <div class="pdp-optionimg">
+            <span class="rytcontent"><img  src="<?= /* @noEscape */ $catimg ?>"></span>
+        </div> -->
+        <div class="pdp-optiontext">
+            <h4 style="float:left;">Split into  <?= /* @noEscape */ $installment ?> payments of <?= /* @noEscape */ $currencySymbol ?> <?= /* @noEscape */ $monthlyPayment ?>  interest-free. <a class="example-icon-14" href="#popup$i">Tell me more</a><p class="interestdiv">0% interest, no fees anytime.</p>
+            </h4>
+        </div>
+        <div class="pdp-optionimg">
+            <span class="rytcontent"><img  src="<?= /* @noEscape */ $catimg ?>"></span>
+        </div>
+        <a href="#popup$i"><div class="mobile-info"></div></a>
+    </div>
+    <br>
+                <!-- <a class="example-icon-14" href="#popup$i"><i class="fa fa-info-circle" aria-hidden="true"></i></a> -->
+    <div id="popup$i" class="overlay">
+        <div class="popup">
+            <div class="closediv">
+               <a class="close" href="#">&times;</a></div>
+            <div class="content">
+                <!-- <iframe src="https://www.dev-taly.io/howitworks" style='width:100%;height: 100%; border: 0px;' frameborder="0" allowfullscreen></iframe> -->
+                <div class="talypay">
+                 
+                 <h1>Buy now, pay over time.</h1>
+                 <div class="sub-head">0% interest. No hidden fees, not even late fees.</div>
+                 <ul class="taly-list">
+          <li>Select <img src="<?= $block->getViewFileUrl('Taly_Taly::images/logo.svg');?>" class="talyicon">at checkout.</li>
+          <li>Choose to split your payment into 4 or pay later in 30 days.</li>
+          <li>You’ll be redirected to<a href=""> Taly.io</a>, create an account with just your phone number.</li>
+          <li>Complete your first order. We´ll send SMS reminders before your next payment is due.</li>
+          
+        </ul>
+              <div class="payment-sec">
+                 <h1 class="payment-heading">Taly payment options</h1>
+                 <p class="pay-heading">Pay Later</p>
+                 <ul class="paylist half">
+                    <li class="circle circle-empty active">
+                       <p class="first payhead">Today</p>
+                       <p class="list-content payhead">No payment</p>
+                    </li>
+                    <li class="circle circle-full black-circle">
+                       <p class="first">After 30 days</p>
+                       <p class="list-content">Full payment</p>
+                    </li>
+                 </ul>
+              </div>
+              <!-- partial -->
+             
+              <div class="payment-sec">
+                 <p class="pay-heading">Split in 4 payments</p>
+                 <ul class="paylist">
+                    <li class="circle circle-quarter active">
+                      <p class="first payhead"> Today</p>
+                       <p class="list-content payhead">First payment</p>
+                    </li>
+                    <li class="circle circle-half">
+                       <p class="first">In One Month</p>
+                       <p class="list-content">2nd payment</p>
+                    </li>
+                    <li class="circle circle-three-quarter">
+                        <p class="first">In 2 Months</p>
+                       <p class="list-content">3rd payment</p>
+                    </li>
+                    <li class="circle circle-full">
+                       <p class="first">In 3 Months</p>
+                       <p class="list-content">4rd payment</p>
+                    </li>
+                 </ul>
+              </div>
+              <!-- partial -->
+              <div class="paybottom">
+              <div class="fl tagbg">Questions? <a href="" class="alink">Visit our FAQs</a></span></div>
+                 <div class="fr cust_pay tagbg">
+                    <ul class="paymethod">
+                       <a href=""><li class="s1"></li></a>
+                         <a href=""><li class="s2"></li></a>
+                          <a href=""><li class="s3"></li></a>
+                         <a href=""><li class="s4"></li></a>
+
+                    </ul>
+
+                 </div></li>
+              </div> 
+                        <!-- partial -->
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <?php } ?>
+        </div>
+        <?php endif; ?>

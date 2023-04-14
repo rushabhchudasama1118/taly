@@ -1,0 +1,65 @@
+<div class="payment-method" data-bind="css: {'_active': (getCode() == isChecked())}">
+    <div class="payment-method-title field choice">
+        <input type="radio"
+               name="payment[method]"
+               class="radio"
+               data-bind="attr: {'id': getCode()}, value: getCode(), checked: isChecked, click: selectPaymentMethod, visible: isRadioButtonVisible()"/>
+        <label data-bind="attr: {'for': getCode()}" class="label"><span data-bind="text: getTitle()">
+        </span></label>
+    </div>
+    <div class="payment-method-content">
+        <!-- ko foreach: getRegion('messages') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+        <!--/ko-->
+        <div class="payment-method-billing-address">
+            <!-- ko foreach: $parent.getRegion(getBillingAddressFormName()) -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+            <!--/ko-->
+        </div>
+        <div class="checkout-agreements-block">
+            <!-- ko foreach: $parent.getRegion('before-place-order') -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+            <!--/ko-->
+        </div>
+        <div  style="padding: 15px;">
+            <h2 data-bind="i18n: 'FINANCE_OPTION'"></h2> 
+            <div data-bind="foreach: gettalypayAvailableService()" class="plan-details-box" >
+                <label class="label">
+                    <input type="radio" class="mdpayment_taly" data-bind="attr: {'id': $data.service_type}, value: $data.service_code, checked: $parent.selectedServiceCheck, click: $parent.selectedServiceClick($data) "/>
+                    <span data-bind="text:  $data.service_code" class="md-step-title"></span>
+                </label>
+            </div>
+            <div class="detailbox" id="mdetailbox"  data-bind="foreach: gettalypayAvailableService()">
+                <div data-bind="foreach: $data.plan_emi,attr:{class: $data.service_type, style:'display:none;'}" >
+                    <div class="md-step active mainbox">
+                        <div class='md-step-circle' data-bind="attr:{class:($parent.service_type + '_' + $data.nbOfInstallment)}">
+                            <span></span>
+                        </div>
+                        <div class="md-step-title">
+                            <span class="crncy" data-bind="text:  $data.dueDate"> </span>
+                            <span class="emi"  data-bind="text:  $data.currency +' '+$data.amount"></span>
+                            <div class="md-step-bar-left"></div>
+                            <div class="md-step-bar-right"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <button class="action primary checkout"
+                        type="submit"
+                        data-bind="
+                        click: placeOrder,
+                        attr: {title: $t('PLACE_ORDER_WITH_TALYPAY')},
+                        css: {disabled: !isPlaceOrderActionAllowed()},
+                        enable: (getCode() == isChecked())  && talypaySelectedService()
+                        "
+                        disabled>
+                    <span data-bind="i18n: 'PLACE_ORDER'"></span>
+                    <span data-bind="afterRender:onRenderComplete"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

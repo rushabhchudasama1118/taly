@@ -1,0 +1,8 @@
+<?php
+/**
+ * @var $block \Talypay\Talypay\Block\Adminhtml\OrderView\View
+ */
+if (isset($block->getContent()['service_monthly_text'])): ?>
+<h4><h2><?= /* @noEscape */ __('FINANCE_OPTION')?></h2></h4>
+<p><?= /* @noEscape */ __($block->getContent()['service_monthly_text']); ?></p>
+<?php endif; ?>

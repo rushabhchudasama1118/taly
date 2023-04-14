@@ -1,0 +1,1288 @@
+.md-stepper-horizontal .md-step.active .md-step-title{font-weight: 600;color: rgba(0,0,0,.87);}
+.md-stepper-horizontal .md-step .md-step-title, .md-stepper-horizontal .md-step .md-step-optional {text-align: center;color: rgba(0,0,0,.26);}
+.md-stepper-horizontal .md-step .md-step-title {margin-top: 16px;font-size: 16px;font-weight: 600;}
+a.kinda-link:hover {cursor: pointer;}
+.modal {display: none; /* Hidden by default */position: fixed; /* Stay in place */z-index: 1; /* Sit on top */padding-top: 100px; /* Location of the box */left: 0;top: 0;width: 100%; /* Full width */height: 100%; /* Full height */overflow: auto; /* Enable scroll if needed */background-color: rgb(0,0,0); /* Fallback color */background-color: rgba(0,0,0,0.4); /* Black w/ opacity */}
+.modal-content {background-color: #fefefe;margin: auto;padding: 20px;border: 1px solid #888;width: 80%;}
+.close {color: #aaaaaa;float: right;font-size: 28px;font-weight: bold;}
+.close:hover,
+.close:focus {color: #000;text-decoration: none;cursor: pointer;}
+.md-stepper-horizontal .md-step .md-step-title, .md-stepper-horizontal .md-step .md-step-optional{text-align: center;color: rgba(0,0,0,.26);}
+.md-stepper-horizontal .md-step .md-step-title {margin-top: 16px;font-size: 16px;font-weight: 600;}
+.md-step div {font-weight: 400!important;}
+span.emi {font-size: .8em;line-height: 1;display: block;color: #340171;font-weight: 700!important;}
+.popup {max-height: 86vh;}
+div.popup div.content {overflow-y: auto;height: 100vh;}
+.payment_box {overflow-x: scroll;}
+.floatBlock {padding: 10px 11px;}
+#payment .payment_methods li .payment_box {padding: 12px 12px;}
+.md-step div {font-weight: 400 !important;    margin-top: 30px!important;}
+div.md-step-title span {font-weight: 600 !important;text-align: center;}
+.taly-box {padding: 20px 0px;font-size: 14px;clear: both;font-weight: bold;}
+.rytcontent {float: right;}
+.taly-box h4 {font-size: 14px;font-weight: bold;margin-bottom: 0px;float: left;}
+.taly-box a {color: #020faaee;text-decoration: none;}
+/*h1 {text-align: center;font-family: Tahoma, Arial, sans-serif;margin: 80px 0;}*/
+.box {width: 40%;margin: 0 auto;background: rgba(255, 255, 255, 0.2);padding: 35px;border: 2px solid #fff;border-radius: 20px/50px;background-clip: padding-box;text-align: center;}
+.taly-box .button {font-size: 1em;padding: 10px;color: #fff;border: 2px solid #06D85F;border-radius: 20px/50px;text-decoration: none;cursor: pointer;transition: all 0.3s ease-out;}
+taly-box .button:hover {background: #06D85F;}
+.overlay {position: fixed;top: 0;bottom: 0;left: 0;right: 0;background: rgba(0, 0, 0, 0.7);transition: opacity 500ms;visibility: hidden;opacity: 0;z-index: 999;}
+.overlay:target {
+visibility: visible;
+opacity: 1;
+}
+.pdp-option {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 1px 10px;
+    -webkit-box-shadow: 1px -2px 17px 0px rgb(212 212 212);
+    -moz-box-shadow: 1px -2px 17px 0px rgba(212,212,212,1);
+    box-shadow: 1px -2px 17px 0px rgb(212 212 212);
+    margin-bottom: 15px;
+}
+
+.pdp-optiontext {
+    float: left;
+  }
+.pdp-optiontext h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 37px;
+    letter-spacing: -0.01em;
+}
+.pdp-optiontext a {
+    color: #2E7CF6!important;
+}
+
+.pdp-optionimg {
+    float: right;
+    vertical-align: middle;
+}
+.pdp-optionimg .rytcontent img {
+    width: 72px;
+    float: left;
+    margin: 10px;
+}
+.interestdiv{
+    display: none;
+}
+.closediv{
+        position: relative;
+    width: 100%;
+    height: 70px;
+}
+.popup {
+margin: 70px auto;
+padding: 5px;
+background: #fff;
+border-radius: 5px;
+width: 30%;
+position: relative;
+transition: all 5s ease-in-out;
+max-width: 660px;
+}
+.popup h2 {
+margin-top: 0;
+color: #333;
+font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+position: absolute;
+top: 20px;
+right: 30px;
+transition: all 200ms;
+font-size: 30px;
+font-weight: bold;
+text-decoration: none;
+color: #333;
+}
+.popup .close:hover {
+color: #06D85F;
+}
+.popup .content {
+max-height: 100%;
+overflow: auto;
+}
+.taly-logo {
+text-align: center;
+}
+.taly-logo img {
+width: 60px;
+margin: 10px 0px;
+}
+.payment_method_talypayment img {
+float: left;
+width: 45px;
+margin-top: 2px;
+}
+.floatBlock {
+display: flex;
+float: left;
+padding: 10px 30px;
+}
+.md-stepper-horizontal {
+display: table;
+width: 100%;
+margin: 0 auto;
+background-color: #FFFFFF;
+box-shadow: 0 3px 8px -6px rgba(0, 0, 0, .50);
+}
+.md-stepper-horizontal .md-step {
+display: table-cell;
+position: relative;
+padding: 15px 5px;
+}
+/**
+.md-stepper-horizontal .md-step:hover,
+.md-stepper-horizontal .md-step:active {
+background-color:rgba(0,0,0,0.04);
+}
+**/
+.md-stepper-horizontal .md-step:active {
+border-radius: 15% / 75%;
+}
+.md-stepper-horizontal .md-step:first-child:active {
+border-top-left-radius: 0;
+border-bottom-left-radius: 0;
+}
+.md-stepper-horizontal .md-step:last-child:active {
+border-top-right-radius: 0;
+border-bottom-right-radius: 0;
+}
+.md-stepper-horizontal .md-step:hover .md-step-circle {
+background-color: #757575;
+}
+.md-stepper-horizontal .md-step:first-child .md-step-bar-left, .md-stepper-horizontal .md-step:last-child .md-step-bar-right {
+display: none;
+}
+.md-stepper-horizontal .md-step .md-step-circle {
+width: 30px;
+height: 30px;
+margin: 0 auto;
+background-color: #999999;
+border-radius: 50%;
+text-align: center;
+line-height: 30px;
+font-size: 16px;
+font-weight: 600;
+color: #FFFFFF;
+}
+.md-stepper-horizontal.green .md-step.active .md-step-circle {
+background-color: #7f54b3;
+}
+.md-stepper-horizontal.orange .md-step.active .md-step-circle {
+background-color: #7f54b3;
+}
+.md-stepper-horizontal .md-step.active .md-step-circle {
+background-color: rgb(33, 150, 243);
+}
+.md-stepper-horizontal .md-step.done .md-step-circle:before {
+font-family: 'FontAwesome';
+font-weight: 100;
+content: "\f00c";
+}
+.md-stepper-horizontal .md-step.done .md-step-circle *, .md-stepper-horizontal .md-step.editable .md-step-circle * {
+display: none;
+}
+.md-stepper-horizontal .md-step.editable .md-step-circle {
+-moz-transform: scaleX(-1);
+-o-transform: scaleX(-1);
+-webkit-transform: scaleX(-1);
+transform: scaleX(-1);
+}
+.md-stepper-horizontal .md-step.editable .md-step-circle:before {
+font-family: 'FontAwesome';
+font-weight: 100;
+content: "\f040";
+}
+.md-stepper-horizontal .md-step .md-step-title {
+margin-top: 16px;
+font-size: 16px;
+font-weight: 600;
+}
+.md-stepper-horizontal .md-step .md-step-title, .md-stepper-horizontal .md-step .md-step-optional {
+text-align: center;
+color: rgba(0, 0, 0, .26);
+}
+.md-stepper-horizontal .md-step.active .md-step-title {
+font-weight: 600;
+color: rgba(0, 0, 0, .87);
+}
+.md-stepper-horizontal .md-step.active.done .md-step-title, .md-stepper-horizontal .md-step.active.editable .md-step-title {
+font-weight: 600;
+}
+.md-stepper-horizontal .md-step .md-step-optional {
+font-size: 12px;
+}
+.md-stepper-horizontal .md-step.active .md-step-optional {
+color: rgba(0, 0, 0, .54);
+}
+.md-stepper-horizontal .md-step .md-step-bar-left, .md-stepper-horizontal .md-step .md-step-bar-right {
+position: absolute;
+top: 30px;
+height: 1px;
+border-top: 1px solid #DDDDDD;
+}
+.md-stepper-horizontal .md-step .md-step-bar-right {
+right: 0;
+left: 50%;
+margin-left: 20px;
+}
+.md-stepper-horizontal .md-step .md-step-bar-left {
+left: 0;
+right: 50%;
+margin-right: 20px;
+}
+.payment_box.payment_method_talypayment {
+background-color: #fff !important;
+border: 1px solid #dfdcde;
+}
+.payment_box.payment_method_talypayment::before {
+display: none;
+}
+.plan-details-box {
+width: 98%;
+margin: auto;
+}
+.plan-details-box .md-stepper-horizontal {
+display: none;
+}
+.activebox {
+display: table !important;
+}
+.md-step.done .md-step-circle:before {
+display: none;
+}
+.md-stepper-horizontal .md-step.done .md-step-circle * {
+display: block;
+}
+#paymentContainer input[type=radio] {
+margin-right: 5px;
+float: left;
+}
+.product .md-stepper-horizontal .md-step {
+padding: 20px 5px !important;
+}
+.product .md-stepper-horizontal .md-step .md-step-title {
+font-size: 12px !important;
+font-weight: bold !important;
+}
+.taly-box img {
+width: 45px;
+float: left;
+margin: 1px 10px;
+}
+.rytcontent {
+display: inline-block;
+float: right;
+}
+span.emi {
+font-size: 16px;
+line-height: 1;
+display: block;
+color: #000;
+font-weight: bold !important;
+float: right;
+margin-top: 6px;
+}
+span.dte {
+font-size: 0.7em;
+font-weight: normal;
+color: #09c15b !important;
+display: block !important;
+line-height: 1;
+margin-top: 7px;
+}
+span.crncy {
+font-size: 16px;
+font-weight: bold !important;
+display: block !important;
+margin-top: 3px;
+margin-left: 20px;
+float:left;
+}
+#payment .payment_methods li .payment_box {
+padding: 1em 0.5em !important;
+}
+a:focus, input:focus, textarea:focus, button:focus {
+outline: 0px solid #7f54b3 !important;
+}
+span.inptlbl {
+margin-top: -5px;
+padding-top: -5px;
+display: block;
+float: left;
+}
+.md-step-circle
+{
+width: 30px;
+height: 30px;
+margin: 0 auto;
+background-color: #999;
+border-radius: 50%;
+text-align: center;
+line-height: 30px;
+font-size: 16px;
+font-weight: 600;
+color: #fff;
+}
+.plan-details-box label.label {
+display: flex;
+/*float: left;*/
+/*padding: 20px 10px;*/
+padding-bottom: 0px;
+padding-top: 20px;
+}
+.detailbox{
+width: 100%;
+text-align: center;
+padding-top: 30px;
+}
+.md-step.active .md-step-circle {
+/*background-color: #7f54b3;*/
+content: '';
+background-image: linear-gradient(180deg, transparent 50%, #0e253f 50%), linear-gradient(270deg, #0e253f 50%, #eee 50%);
+width: 30px;
+height: 30px;
+border-radius: 50px;
+margin: 0 auto 10px auto;
+padding: 2px;
+display: block;
+}
+
+.md-step.active .ONE_MONTH_1{
+background: #000;
+width:24px;
+height:24px;
+border-radius: 50px;
+margin: 0;
+padding: 2px;
+display: block;
+float: left;
+border: solid 2px #000;
+    box-shadow: 0 0 0 2px #fff inset;
+}
+.THREE_MONTHS{
+    padding-left: 0px;
+    width: 460px;
+    /*margin: auto;*/
+    max-width: 100%;
+    min-height: 200px;position:relative;
+}
+/*.THREE_MONTHS:before{
+    content: '';
+    height: 200px;
+    width: 2px;
+    display: block;
+    margin-left: 18px;
+    top: 54px;
+    position: absolute;
+    background: #EAE8E5;
+    background-repeat: repeat;
+    display: block;
+}*/
+.ONE_MONTH{
+    padding-left: 0px;
+    width: 460px;
+    /*margin: auto;*/
+    max-width: 100%;
+    min-height: 200px;position:relative;
+}
+.ONE_MONTH:before{
+    content: '';
+/*    background: #EAE8E5;*/
+    width: 2px;
+    height: 27px;
+    display: block;
+    margin-left: 18px;
+    top: 78px;
+    position: absolute;
+}
+.md-step.active .THREE_MONTHS_0{
+content: '';
+content: '';
+background-image: linear-gradient(360deg, #fff 50%, transparent 50%), linear-gradient(270deg, #000 50%, #fff 50%);
+width: 24px;
+height:24px;
+border-radius: 50px;
+margin: 0;
+padding: 2px;
+display: block;
+float: left;
+border: solid 2px #000;
+    box-shadow: 0 0 0 2px #fff inset;
+}
+.md-step.active .THREE_MONTHS_1{
+content: '';
+background-image: linear-gradient(-90deg, #ADABAD 50%, transparent 50%), linear-gradient(90deg, #fff 50%, transparent 50%);
+width:24px;
+height:24px;
+border-radius: 50px;
+margin: 0;
+padding: 2px;
+display: block;
+float: left;
+border: solid 2px #ADABAD;
+    box-shadow: 0 0 0 2px #fff inset;
+}
+.md-step.active .THREE_MONTHS_2{
+content: '';
+background-image: linear-gradient(180deg, transparent 50%, #ADABAD 50%), linear-gradient(270deg, #ADABAD 50%, #fff 50%);
+width: 24px;
+height: 24px;
+border-radius: 50px;
+margin: 0;
+padding: 2px;
+display: block;
+float: left;
+border: solid 2px #ADABAD;
+    box-shadow: 0 0 0 2px #fff inset;
+}
+.md-step.active .THREE_MONTHS_3{
+background: #ADABAD;
+width: 24px;
+height: 24px;
+border-radius: 50px;
+margin: 0;
+padding: 2px;
+display: block;
+float: left;
+border: solid 2px #ADABAD;
+    box-shadow: 0 0 0 2px #fff inset;
+}
+.md-step .md-step-title {
+margin-top: 0px;
+font-size: 16px;
+font-weight: 600;
+color: rgba(0, 0, 0, .87);
+text-align: center;
+/*float: left;*/
+}
+.md-step .md-step-bar-left, .md-step .md-step-bar-right {
+position: absolute;
+top: 16px;
+height: 1px;
+}
+.md-step.active.mainbox {
+width: 100%;
+float: left;
+position: relative;
+}
+.md-step .md-step-bar-left {
+left: 0;
+right: 50%;
+margin-right: 20px;
+}
+.payment-method{margin-top: 40px;}  
+.payment-sec{width:600px;text-align: left;}
+.md-step .md-step-bar-right {right: 0;left: 50%;margin-left: 20px;}
+.actions-toolbar{margin-top: 2%;}
+.box {width: 40%;margin: 0 auto;background: rgba(255,255,255,0.2);padding: 35px;border: 2px solid #fff;border-radius: 20px/50px;background-clip: padding-box;text-align: center;}
+.button {font-size: 1em;text-decoration: none;cursor: pointer;transition: all 0.3s ease-out;}
+.button:hover {background: #ffffff;}
+.overlay {position: fixed;top: 0;bottom: 0;left: 0;right: 0;background: rgba(0, 0, 0, 0.7);transition: opacity 500ms;visibility: hidden;opacity: 0;z-index: 9999;height:100%;}
+.overlay:target {visibility: visible;opacity: 1;}
+.popup {margin: 35px auto;padding: 40px;background: #fff;border-radius: 5px;width: 60%;position: relative;transition: all 5s ease-in-out;height: 90vh;max-width: 660px}
+.popup h2 {margin-top: 0;color: #333;font-family: Tahoma, Arial, sans-serif;}
+.popup .close {position: absolute;top: 20px;right: 10px;transition: all 200ms;font-size: 30px;font-weight: bold;text-decoration: none;color: #333;}
+.popup .close:hover {color: #06D85F;}
+.popup .content {height: 100%;overflow: hidden;}
+.finance-talypay-box a {    color: #2E7CF6;
+text-decoration: none;}
+.rytcontent img{width: 45px;float: left;margin: -3px 10px;}
+.rytcontent {display: inline-block;float: right;}
+.payment-heading{text-align: center;font-family: 'ubuntu';font-weight: 400;font-size: 24px;}
+.payment-sec{font-family: 'ubuntu';}
+.payment-sec p{text-align: center;}
+.paylist{padding-left: 0px;width: 700px;margin: auto;max-width: 100%;min-height: 170px;position: relative;}
+.paylist.half{position: relative;}
+.paylist.half:before{content: '';background: #bbb;width: 80%;height: 1px;display: block;margin-left: 10%;top: 15px;position: absolute;}
+/*.paylist:before{
+content: '';
+background: #bbb; height: 1px;
+width: 74%;
+display: block;
+margin-left: 13%;
+top: 15px;
+position: absolute;
+}*/
+.list-content{
+color: #aaa;
+font-size: 13px;
+line-height: 10px;
+}
+.paylist li:after {
+content: '';
+width: 100%;
+height: 2px;
+background: lightgray;
+position: absolute;
+left: 0;
+top: 18px;
+z-index: -1;display: none;
+}
+.paylist li.circle.circle-quarter:before {
+content: '';
+background-image: linear-gradient(360deg, #eee 50%, transparent 50%), linear-gradient(270deg, #0e253f 50%, #eee 50%);
+width: 30px;
+height: 30px;
+border-radius: 50px;
+margin: 0 auto 10px auto;
+padding: 2px;
+display: block;
+}
+.paylist li.circle.circle-full:before {content: '';
+background: #0e253f;
+width: 30px;
+height: 30px;
+border-radius: 50px;
+margin: 0 auto 10px auto;
+padding: 2px;
+display: block;
+}
+.example-icon-14 {
+    .lib-icon-font(
+        @icon-envelope,
+        @_icon-font-size: 26px
+   );
+    .lib-icon-text-hide();
+}
+.payment-heading{
+text-align: center;
+font-family: 'ubuntu';
+font-weight: 400;
+font-size: 24px;
+}
+.payment-sec{
+font-family: 'ubuntu';
+}
+.payment-sec p{
+text-align: center;
+}
+.paylist{
+padding-left: 0px;
+width: 700px;
+margin: auto;
+max-width: 100%;min-height: 170px;position: relative;
+}
+.paylist.half{
+position: relative;
+}
+/*.paylist.half:before{
+content: '';
+background: #bbb;
+width: 80%;
+height: 1px;
+display: block;
+margin-left: 10%;
+top: 15px;
+position: absolute;
+}*/
+
+.payment-sec .paylist.half p.first {
+text-align: center;
+margin-top: 30px;
+}
+.paylist.half .circle:last-child {
+text-align: right;float:right;
+}
+.paylist li:after {
+content: '';
+width: 100%;
+height: 2px;
+background: lightgray;
+position: absolute;
+left: 0;
+top: 18px;
+z-index: -1;display: none;
+}
+.paylist li.circle.circle-quarter:before {content: '';
+content: '';
+background-image: linear-gradient(360deg, #eee 50%, transparent 50%), linear-gradient(270deg, #0e253f 50%, #eee 50%);
+width: 30px;
+height: 30px;
+border-radius: 50px;
+margin: 0 auto 10px auto;
+padding: 2px;
+display: block;
+}
+.box {width: 40%;margin: 0 auto;background: rgba(255,255,255,0.2);padding: 35px;border: 2px solid #fff;border-radius: 20px/50px;background-clip: padding-box;text-align: center;}
+.button {font-size: 1em;text-decoration: none;cursor: pointer;transition: all 0.3s ease-out;}
+.button:hover {background: #ffffff;}
+.overlay {position: fixed;top: 0;bottom: 0;left: 0;right: 0;background: rgba(0, 0, 0, 0.7);transition: opacity 500ms;visibility: hidden;opacity: 0;z-index: 9999;height:100%;}
+.overlay:target {visibility: visible;opacity: 1;}
+.popup {    margin: 0px auto;
+    padding: 0;
+    background: transparent;
+    border-radius: 5px;
+    width: 60%;
+    position: relative;
+    transition: all 5s ease-in-out;
+    height: 100vh;}
+.popup h2 {margin-top: 0;color: #333;font-family: Tahoma, Arial, sans-serif;}
+.popup .close {
+    position: absolute;
+    top: 88px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    background: #D9D9D9;
+    line-height: 13px;
+    font-weight: 400;
+    border-radius: 30px;
+    padding: 5px 3px 8px 3px;
+}
+
+
+.popup .content {height: 100%;overflow: hidden;}
+.finance-talypay-box a {color: #000;text-decoration: none;}
+.rytcontent img{width: 45px;float: left;margin: -3px 10px;}
+.rytcontent {display: inline-block;float: right;}
+.payment-heading{text-align: center;font-family: 'ubuntu';font-weight: 400;font-size: 24px;}
+.payment-sec{font-family: 'ubuntu';}
+.payment-sec p{text-align: center;}
+.paylist{padding-left: 0px;width: 700px;margin: auto;max-width: 100%;min-height: 170px;position: relative;}
+.paylist.half{position: relative;}
+.paylist.half:before{
+       content: '';
+    background: #EAE8E5;
+    width: 64%;
+    height: 2px;
+    display: block;
+    margin-left: auto;
+    top: 15px;
+    position: absolute;
+    left: 18%;}
+.circle {
+margin: 0;
+width: 25%;
+float: left;
+height: 30px;
+border-radius: 50%;
+text-align: center;
+position: relative;
+list-style-type: none;
+}
+.paylist li.circle.circle-half:before {content: '';
+background-image: linear-gradient(-90deg, #0e253f 50%, transparent 50%), linear-gradient(90deg, #eee 50%, transparent 50%);
+width: 30px;
+height: 30px;
+border-radius: 50px;
+margin: 0 auto 10px auto;
+padding: 2px;
+display: block;
+}
+.paylist li.circle.circle-three-quarter:before {content: '';
+background-image: linear-gradient(180deg, transparent 50%, #0e253f 50%), linear-gradient(270deg, #0e253f 50%, #eee 50%);
+width: 30px;
+height: 30px;
+border-radius: 50px;
+margin: 0 auto 10px auto;
+padding: 2px;
+display: block;
+}
+.circle-three-quarter{
+}
+@font-face {
+    font-family: 'Manrope-Regular';
+    src: url(../fonts/Manrope-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(../fonts/inter/Inter-Regular.otf) format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+  }
+  body{
+      margin: 0px;padding: 0px;font-family: 'Inter';
+  }
+  .paymethod li{
+      display: inline-block;
+      margin-left: 3px;
+  }
+  .s1{
+      background: url(../images/s1.svg);
+      display: block;
+      width: 38px;
+      height: 34px;
+      background-repeat: no-repeat;
+      background-size: contain;
+  }
+  .s2{
+  background: url(../images/s2.svg);
+      display: block;
+      width: 32px;
+      height: 31px;
+      background-repeat: no-repeat;
+      background-size: contain;
+  }
+  .s3{
+         background: url(../images/s3.svg);
+      display: block;
+      width: 52px;
+      height: 34px;
+      background-repeat: no-repeat;
+      background-size: contain;
+  }
+  .s4{
+       background: url(../images/s4.svg);
+      display: block;
+      width: 41px;
+      height: 34px;
+      background-repeat: no-repeat;
+      background-size: contain;
+  }
+  .paybottom{
+         display: inline-block;
+      width: 100%;
+      border-top: solid 1px #eee;
+    padding-top: 20px;
+  }
+  .paymethod{
+      margin: 0px;
+  }
+  .talyicon{
+      height: 24px;
+      vertical-align: middle;    margin: 0 5px;
+  }
+  .talypay{
+          border: solid 1px #ADABAD;
+      width: 600px;
+      margin: auto;
+      max-width: 90%;
+      border-radius: 20px;    padding: 18px 18px 10px 18px;background: #fff;
+  }
+  .fr{
+      float:right;
+  }
+  .fl{
+      float:left;
+  }
+  .alink{
+      color:#2E7CF6!important;
+  }
+  a{
+      color:#1E3859;text-decoration: none;
+  }
+  ul.taly-list {
+       counter-reset: li;
+       list-style-type: none;
+       font-size: 14px;
+       line-height: 18px;
+       padding-left: 0px;
+       margin-top: 20px;margin-bottom: 35px;
+  }
+   ul.taly-list li {
+          position: relative;
+      padding: 9px 0 4px 30px;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      color: #79757A;
+      text-align: left;
+      letter-spacing: -0.01em;
+  }
+   ul.taly-list li:before {
+       content: counter(li);
+       counter-increment: li;
+       height: 24px;
+       width: 24px;
+       
+       border-radius: 50%;
+       color: #79757A;
+       text-align: center;
+       position: absolute;
+       left: 0;
+       top: 9px;
+       background-color: #EAE8E5;
+  }
+  
+  .talypay h1{
+         font-family: 'Inter';
+    font-style: normal;
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+    color: #000;
+    margin-top: 15px;
+    text-align: left;
+  }
+  .sub-head{
+      font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  /* identical to box height, or 156% */
+  
+  letter-spacing: -0.01em;
+  
+  /* Taly Blue Shade 3 OLD */
+  
+  color: #79757A;
+  
+  }
+  .payment-heading{
+  text-align: center!important;
+  font-family: 'Inter'!important;
+  font-weight: 500!important;
+  font-size: 24px!important;
+  }
+  .paylist:before{
+  content:'';
+  }
+  .payment-sec{
+  font-family: 'Inter';
+  }
+  .payment-sec p{
+text-align: center;
+    font-size: 14px;
+    line-height: 10px;
+    margin: 11px 0;
+  }
+  .paylist{
+  padding-left: 0px;
+  width: 460px;
+  margin: auto;
+  max-width: 100%;min-height: 115px;position: relative;
+  }
+  .checkout-paylist{
+          padding-left: 0px;
+      width: 460px;
+      margin: auto;
+      max-width: 100%;
+      min-height: 130px;
+  }
+  .paylist.half{
+  position: relative;
+  }
+  .checkout-paylist.paylist.half:before{
+      content: '';
+      background: #bbb;
+      width: 1px;
+      height: 80%;
+      display: block;
+          margin-left: 20px;
+      top: 15px;
+      position: absolute;
+  }
+ /* .paylist.half:before{
+  content: '';
+  background: #bbb;
+  width: 80%;
+  height: 1px;
+  display: block;
+  margin-left: 10%;
+  top: 15px;
+  position: absolute;
+  }*/
+  .payment-sec .paylist.half p.first {
+  text-align: center;
+  margin-top: 13px;
+  }
+  .paylist.half .circle:first-child {
+  /*text-align: left;*/
+  }
+  .paylist.half .circle:last-child {
+  text-align: right;float:right;
+  }
+  .paylist.half li.circle.circle-quarter:before{
+  /*margin: 0px;float:left;*/
+  }
+  .paylist.half li.circle.circle-full:before{
+  /*margin: 0px;float:right;*/
+  }
+/*  .paylist:before{
+  content: '';
+  background: #bbb; height: 1px;
+  width: 74%;
+  display: block;
+  margin-left: 13%;
+  top: 15px;
+  position: absolute;
+  }*/
+  .list-content{
+  color: #79757A;
+  font-size: 13px;
+  line-height: 10px;
+  }
+  .paylist.half .circle{
+  /*width:50%;*/
+  }
+  .circle {
+  margin: 0;
+  width: 25%;
+  float: left;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  list-style-type: none;font-size: 14px;
+  }
+  .circle.checkout-circle{
+          margin: 0;
+      width: 100%;
+      float: left;
+      height: 30px;
+      border-radius: 50%;
+      text-align: left;
+      position: relative;
+      list-style-type: none;
+      font-size: 14px;
+      margin-top: 20px;
+  }
+  .paylist li:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: lightgray;
+  position: absolute;
+  left: 0;
+  top: 18px;
+  z-index: -1;display: none;
+  }
+  .paylist li.circle.circle-empty:before {content: '';
+  content: '';
+  background-image: linear-gradient(360deg, #fff 50%, transparent 50%), 
+  linear-gradient(270deg, #fff 50%, #fff 50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
+  margin: 0 auto 10px auto;
+  padding: 2px;
+  display: block;border: solid 2px #000;box-shadow: 0 0 0 2px #fff inset;
+  }
+  .paylist.checkout-paylist li.circle.circle-quarter:before,
+  .paylist.checkout-paylist li.circle.circle-full:before{
+  margin: 0;float:left;
+  }
+  .paylist li.circle.circle-quarter:before {content: '';
+  content: '';
+  background-image: linear-gradient(360deg, #fff 50%, transparent 50%), 
+  linear-gradient(270deg, #000 50%, #fff 50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
+  margin: 0 auto 10px auto;
+  padding: 2px;
+  display: block;border: solid 2px #1E3859;box-shadow: 0 0 0 2px #fff inset;
+  }
+  .paylist li.circle.circle-half:before {content: '';
+  background-image: linear-gradient(-90deg, #ADABAD 50%, transparent 50%),
+   linear-gradient(90deg, #fff 50%, transparent 50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
+  margin: 0 auto 10px auto;
+  padding: 2px;
+  display: block;border: solid 2px #ADABAD;box-shadow: 0 0 0 2px #fff inset;
+  }
+  .paylist li.circle.circle-three-quarter:before {content: '';
+  background-image: linear-gradient(180deg, transparent 50%, #ADABAD 50%),
+   linear-gradient(270deg, #ADABAD 50%, #fff 50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
+  margin: 0 auto 10px auto;
+  padding: 2px;
+  display: block;border: solid 2px #ADABAD;box-shadow: 0 0 0 2px #fff inset;
+  }
+  .paylist li.circle.circle-full.black-circle:before{
+    background: #000;border: solid 2px #000;
+  }
+  .paylist li.circle.circle-full:before {content: '';
+     content: '';
+    background: #ADABAD;
+    width: 24px;
+    height: 24px;
+    border-radius: 50px;
+    margin: 0 auto 10px auto;
+    padding: 2px;
+    display: block;
+    border: solid 2px #ADABAD;
+    box-shadow: 0 0 0 2px #fff inset;
+  }
+@media screen and (max-width: 700px) {
+    .box{width: 70%;}
+    .popup{width: 100%;
+    padding: 0%;
+    border-radius: 0px;
+    height: 100vh;
+    margin: 0 auto;
+    max-height: 100vh;margin-top: 0px;
+}
+    .paylist{max-width: 100%;display: inline-block;min-height: 156px;margin-bottom:30px;}
+    .talypay h1{font-size: 21px;color:#000;}
+    .talypay{max-width: 84%;
+    margin-top: 0px;
+    padding: 0% 7% 15% 7%;
+    border: 0px;
+    border-radius: 0px;}
+    .payment-sec p {line-height:18px;text-align: center;}
+    .payment-sec{width: 100%;}
+    .fr.cust_pay{float: left;margin-top: 10px;}
+    .paymethod{padding-left: 0px;}
+    .THREE_MONTHS{    max-width: 100%;
+    min-height: 277px;
+    position: relative;
+    display: inline-block;
+    width: auto;}
+    .ONE_MONTH{    max-width: 100%;
+    min-height: 277px;
+    position: relative;
+    width: auto;}
+    span.crncy {font-size: 14px;}
+    span.emi {font-size: 14px;}
+
+}
+.paylist li.circle.circle-quarter:after,
+.paylist li.circle.circle-half:after,
+.paylist li.circle.circle-three-quarter:after
+{
+       content: '';
+    background: #EAE8E5;
+    height: 1px;
+    width: 56%;
+    display: block;
+    margin-left: 71%;
+    top: 15px;
+    position: absolute;
+    z-index: 1;
+}
+.payment-sec p.pay-heading{
+    font-size: 16px;margin-bottom: 14px;
+}
+
+
+.md-step.active.mainbox:after 
+{
+       content: '';
+    height: 16px;
+    width: 2px;
+    display: block;
+    margin-left: 14px;
+    top: 70px;
+    position: absolute;
+    background: #ADABAD;
+    background-repeat: repeat;
+    display: block;
+
+}
+
+.md-step.active.mainbox:last-child:after{
+   background: transparent; 
+}
+
+
+@media screen and (max-width: 640px) {
+ .circle{
+    width: 100%;display: inline-block;
+    
+    margin-top: 40px;
+ }
+ .paylist li.circle.circle-empty:before,.paylist li.circle.circle-full:before,
+ .paylist li.circle.circle-quarter:before,.paylist li.circle.circle-half:before,
+ .paylist li.circle.circle-three-quarter:before{
+    margin: 0px;width: 24px;height: 24px;float: left;
+ }
+ .paylist.half .circle:first-child{
+  
+ }
+ .payment-sec p {
+    text-align: left;
+    font-size: 14px;
+    float: left;
+}
+.list-content {
+    color: #79757A;
+       font-size: 12px!important;
+    line-height: 10px;
+    float: right!important;
+    text-align: right!important;
+}
+.payment-sec .paylist.half p.first {
+ text-align: center;
+    margin-top: 7px;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #4D4952;
+}
+.payment-sec p {
+    text-align: left;
+    
+    float: left;
+    margin-top: 7px;
+    margin-left: 10px;
+     font-size: 16px;
+    color: #4D4952;
+}
+.paylist.half:before{
+        content: '';
+    background: #ADABAD;
+    width: 2px;
+    height: 22px;
+    display: block;
+    margin-left: 16px;
+    top: 70px;
+    position: absolute;
+    left: 0px;
+    z-index: 9;
+}
+.paylist li.circle.circle-quarter:after, .paylist li.circle.circle-half:after, .paylist li.circle.circle-three-quarter:after {
+           content: '';
+    height: 20px;
+    width: 1px;
+    display: block;
+    margin-left: 16px;
+    top: 41px;
+    position: absolute;
+    background: #ADABAD;
+    background-repeat: repeat;
+    display: block;
+    z-index: 9;
+}
+.talypay h1{
+        font-size: 28px;    font-weight: 600;
+}
+ul.taly-list{
+        padding-left: 0;
+}
+ul.taly-list li{
+        font-size: 16px;
+            padding: 9px 0 9px 40px;line-height: 30px;
+}
+ul.taly-list li:before{
+        font-size: 14px;line-height: 24px;top: 13px;
+}
+.payment-heading {
+    text-align: left!important;
+    font-weight: 600!important;
+    font-size: 24px!important;
+}
+.payment-sec{
+
+    max-width: 100%;
+}
+.payment-sec p.pay-heading{
+    margin-top: 0px;
+    margin-left: 0;margin-bottom: 0px;color: #2C2638;
+
+}
+.circle:first-child{
+    margin-top:30px;
+}
+.paylist{
+        margin-bottom: 30px;display: inline-block;
+}
+.payhead{
+       font-size: 16px!important;
+    font-weight: 600;
+}
+.tagbg{
+        float: none!important;
+    display: block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.paybottom{
+    padding-top:30px;
+}
+.pdp-optionimg .rytcontent img {
+    width: 44px;
+float: left;
+margin: 17px 10px 10px 0;
+}
+.pdp-optiontext{
+    order:2;
+}
+.pdp-optiontext a{
+display: none;
+}
+.pdp-option {
+width: 92%;
+margin: auto;
+margin-bottom: 20px;
+display: flex;
+position: relative;
+}
+.pdp-optiontext h4 {
+line-height: 12px;
+font-family: 'Manrope-Regular';
+font-size: 12px;
+margin-top: 12px;
+margin-bottom: 0px;
+}
+.pdp-optionimg {
+float: left;
+vertical-align: middle;order:1;
+}
+.interestdiv{
+color: #68737F;
+line-height: 0px;display: block;
+line-height: 20px;
+text-align: left;
+}
+.mobile-info{
+    right: 15px;
+    position: absolute;
+    top: 15px;
+    cursor: pointer;
+}
+.mobile-info::before {
+content: url('../images/info.svg');
+width: 20px;
+height: 20px;
+}
+.rytcontent {
+    display: inline-block;
+    float: left;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    background: #D9D9D9;
+    line-height: 13px;
+    font-weight: 400;
+    border-radius: 30px;
+    padding: 5px 3px 8px 3px;
+}
+.popup{
+    background-color:#fff;
+}
+}
+@media screen and (max-width: 520px){
+    .pdp-optionimg .rytcontent img{
+        width: 44px;
+    float: left;
+    margin: 17px 10px 10px 0;
+    }
+}
+
