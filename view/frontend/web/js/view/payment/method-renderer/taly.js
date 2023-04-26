@@ -21,7 +21,7 @@ define(
                 'redirectAfterPlaceOrder': false,
                 'template': 'Taly_Taly/payment/taly',
                 'selectedServiceJson' : ko.observable(0),
-                'talypaySelectedService':ko.observable(false),
+                'talypaySelectedService':ko.observable(true),
                 'serviceCounter' : 0
             },
             talypayTermsChecked: ko.observable(false),
@@ -63,10 +63,14 @@ define(
             gettalypayAvailableService: function() {
                 console.log("2");
 
-                this.talypaySelectedService(false);
+                //this.talypaySelectedService(false);
 
                 let zas = window.checkoutConfig.payment.taly.talypayAvailableService;
                 for (var i = 0; i < zas.length; ++i) {
+		    if (zas[i]['plan_emi'].length === 0) {
+                        this.selectedServiceCheck(zas[i]['service_code']);
+			this.talypaySelectedService(false);
+                    }
                     if (zas[i]['service_installment_bool']) {
                       let total = 0;
 		      let order_total = 0;
