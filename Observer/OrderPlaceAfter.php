@@ -121,13 +121,12 @@ class OrderPlaceAfter implements \Magento\Framework\Event\ObserverInterface
                         'currency'=> $currencyCode
                     ];
                 }
+                $precode = 'M';
                 $paymentmode = $this->_zDataHelper->getConfigData(zDataHelper::XML_PAYMENT_MODE);
                 if ($paymentmode == 0) {
                     $curlPaymentUrl = $this->_zDataHelper->getTestUrlValue().'accounts/payment/initiate';
-                    $precode = 'SERVER';
                 } else {
                     $curlPaymentUrl = $this->_zDataHelper->getLiveUrlValue().'accounts/payment/initiate';
-                    $precode = 'LIVE';
                 }
 
                 $request = [
