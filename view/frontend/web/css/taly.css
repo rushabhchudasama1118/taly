@@ -1237,11 +1237,13 @@ margin-bottom: 0px;
 float: left;
 vertical-align: middle;order:1;
 }
-.interestdiv{
-color: #68737F;
-line-height: 0px;display: block;
-line-height: 20px;
-text-align: left;
+.interestdiv {
+    color: #68737F;
+    line-height: 0px;
+    display: block;
+    line-height: 20px;
+    text-align: left;
+    margin-top: 7px;
 }
 .mobile-info{
     right: 15px;
