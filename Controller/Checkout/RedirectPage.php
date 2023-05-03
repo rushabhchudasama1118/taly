@@ -1,5 +1,5 @@
 <?php
-namespace Taly\Taly\Controller\Checkout;
+namespace Talypay\Taly\Controller\Checkout;
 
 use \Magento\Framework\App\ResponseInterface;
 use \Magento\Framework\App\Action\Context;

@@ -1,5 +1,5 @@
 <?php
-namespace Taly\Taly\Controller\Payment;
+namespace Talypay\Taly\Controller\Payment;
 
 use Magento\Framework\App\RequestInterface;
 use Magento\Framework\App\Request\InvalidRequestException;
@@ -10,11 +10,11 @@ use Magento\Sales\Api\Data\TransactionInterface;
 use Magento\Sales\Model\Order;
 use Magento\Sales\Model\Order\Email\Sender\InvoiceSender;
 use Magento\Sales\Model\Service\InvoiceService;
-use Taly\Taly\Helper\Data as zDataHelper;
-use Taly\Taly\Helper\Order\OrderTransactionHelperInterface;
-use Taly\Taly\Logger\Zlogger;
-use Taly\Taly\Model\CheckoutConfigProvider;
-use Taly\Taly\Model\PaymentMethod;
+use Talypay\Taly\Helper\Data as zDataHelper;
+use Talypay\Taly\Helper\Order\OrderTransactionHelperInterface;
+use Talypay\Taly\Logger\Zlogger;
+use Talypay\Taly\Model\CheckoutConfigProvider;
+use Talypay\Taly\Model\PaymentMethod;
 use \Magento\Checkout\Model\Session as Checkoutsession;
 use \Magento\Customer\Model\Session;
 use \Magento\Framework\App\Action\Context;

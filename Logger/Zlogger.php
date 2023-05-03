@@ -1,9 +1,9 @@
 <?php
-namespace Taly\Taly\Logger;
+namespace Talypay\Taly\Logger;
 
 /**
  * @category    Taly
- * @package     Taly_Taly
+ * @package     Talypay_Taly
  * @copyright Copyright © 2020 Taly Taly. All rights reserved.
  * @author
  */

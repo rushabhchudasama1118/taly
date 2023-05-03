@@ -1,5 +1,5 @@
 <?php
-namespace Taly\Taly\Model\Config\Source;
+namespace Talypay\Taly\Model\Config\Source;
 
 /**
  * Used in creating options for getting product type value

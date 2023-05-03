@@ -3,14 +3,14 @@
     <type name="Magento\Payment\Model\CcGenericConfigProvider">
         <arguments>
             <argument name="methodCodes" xsi:type="array">
-                <item name="taly_payment" xsi:type="const">Taly\Taly\Model\PaymentMethod::CODE</item>
+                <item name="taly_payment" xsi:type="const">Talypay\Taly\Model\PaymentMethod::CODE</item>
             </argument>
         </arguments>
     </type>
     <type name="Magento\Checkout\Model\CompositeConfigProvider">
         <arguments>
             <argument name="configProviders" xsi:type="array">
-                <item name="talypayment_checkout_config_provider" xsi:type="object">Taly\Taly\Model\CheckoutConfigProvider</item>
+                <item name="talypayment_checkout_config_provider" xsi:type="object">Talypay\Taly\Model\CheckoutConfigProvider</item>
             </argument>
         </arguments>
     </type>

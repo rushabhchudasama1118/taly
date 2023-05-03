@@ -1,5 +1,5 @@
 <?php
-namespace Taly\Taly\Setup\Patch\Data;
+namespace Talypay\Taly\Setup\Patch\Data;
 
 use Exception;
 use Magento\Framework\Exception\AlreadyExistsException;

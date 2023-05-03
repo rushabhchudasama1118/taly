@@ -1,5 +1,5 @@
 <?php
-namespace Taly\Taly\Controller\Payment;
+namespace Talypay\Taly\Controller\Payment;
 
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\App\Action\Action;
@@ -13,10 +13,10 @@ use Magento\Framework\App\ResponseInterface;
 use Magento\Sales\Api\Data\CreditmemoInterface;
 use Magento\Sales\Api\Data\TransactionInterface;
 use Magento\Sales\Model\Order;
-use Taly\Taly\Helper\Data as zDataHelper;
-use Taly\Taly\Helper\Order\OrderTransactionHelperInterface;
-use Taly\Taly\Logger\Zlogger;
-use Taly\Taly\Model\PaymentMethod;
+use Talypay\Taly\Helper\Data as zDataHelper;
+use Talypay\Taly\Helper\Order\OrderTransactionHelperInterface;
+use Talypay\Taly\Logger\Zlogger;
+use Talypay\Taly\Model\PaymentMethod;
 
 class Refund extends Action implements CsrfAwareActionInterface, HttpPostActionInterface
 {

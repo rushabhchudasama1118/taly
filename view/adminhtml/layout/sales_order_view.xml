@@ -1,7 +1,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 	<body>
 		<referenceContainer name="order_additional_info">
-			<block class="Taly\Taly\Block\Adminhtml\OrderView\View" template="Taly_Taly::view/view_order_info.phtml" />
+			<block class="Talypay\Taly\Block\Adminhtml\OrderView\View" template="Talypay_Taly::view/view_order_info.phtml" />
 		</referenceContainer>
 	</body>
 </page>

@@ -1,5 +1,5 @@
 <?php
-namespace Taly\Taly\Logger\Handler;
+namespace Talypay\Taly\Logger\Handler;
 
 /**
  * @copyright Copyright © 2020 Taly Taly. All rights reserved.
