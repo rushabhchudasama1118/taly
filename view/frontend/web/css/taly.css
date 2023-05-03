@@ -1245,10 +1245,10 @@ vertical-align: middle;order:1;
     text-align: left;
     margin-top: 7px;
 }
-.mobile-info{
-    right: 15px;
+.mobile-info {
+    right: 12px;
     position: absolute;
-    top: 15px;
+    top: 22px;
     cursor: pointer;
 }
 .mobile-info::before {
@@ -1288,3 +1288,21 @@ height: 20px;
     }
 }
 
+@media screen and (max-width: 376px)
+    .pdp-optionimg .rytcontent img {
+    width: 44px;
+    float: left;
+    margin: 17px 6px 10px 0;
+   }
+
+  .pdp-option {
+    width: 98%;
+    padding: 1px 5px;
+    }
+    .mobile-info {
+    right: 0px;
+    position: absolute;
+    top: 18px;
+    cursor: pointer;
+    }
+}
