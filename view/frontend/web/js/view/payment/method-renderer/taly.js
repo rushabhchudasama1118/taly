@@ -5,7 +5,7 @@ define(
         'Magento_Checkout/js/model/totals',
         'Magento_Checkout/js/model/quote',
         'Magento_Checkout/js/view/payment/default',
-        'Taly_Taly/js/action/set-payment-method-action',
+        'Talypay_Taly/js/action/set-payment-method-action',
         'Magento_Checkout/js/model/shipping-rate-registry',
         'jquery/jquery-storageapi',
         'mage/cookies',
@@ -19,7 +19,7 @@ define(
         return Component.extend({
             defaults: {
                 'redirectAfterPlaceOrder': false,
-                'template': 'Taly_Taly/payment/taly',
+                'template': 'Talypay_Taly/payment/taly',
                 'selectedServiceJson' : ko.observable(0),
                 'talypaySelectedService':ko.observable(true),
                 'serviceCounter' : 0

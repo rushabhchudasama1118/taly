@@ -1,5 +1,5 @@
 <?php
-$zDataHelper = $this->helper('Taly\Taly\Helper\Data');
+$zDataHelper = $this->helper('Talypay\Taly\Helper\Data');
 $showProduct = $zDataHelper->getConfigData($zDataHelper::XML_DISPLAY_INFO_PRODUCTPAGE);
 $product_price= $zDataHelper->getProduct()->getFinalPrice();
 $fetchConfigResponse = $zDataHelper->curlPaymentProduct($product_price);
@@ -10,7 +10,7 @@ if ($showProduct && !empty($fetchConfigResponse['response'])):
     $fetchConfigResponse = $zDataHelper->curlPaymentProduct($product_price);
     file_put_contents(BP.'/var/log/getdata.log', ' ::DATA:: '.print_r(count($fetchConfigResponse),true).PHP_EOL,FILE_APPEND);
 
-    $catimg = $block->getViewFileUrl('Taly_Taly::images/logo.svg');
+    $catimg = $block->getViewFileUrl('Talypay_Taly::images/logo.svg');
     ?>
 <div class='finance-talypay-box'>
     <?php
@@ -48,7 +48,7 @@ if ($showProduct && !empty($fetchConfigResponse['response'])):
                  <h1>Buy now, pay over time.</h1>
                  <div class="sub-head">0% interest. No hidden fees, not even late fees.</div>
                  <ul class="taly-list">
-          <li>Select <img src="<?= $block->getViewFileUrl('Taly_Taly::images/logo.svg');?>" class="talyicon">at checkout.</li>
+          <li>Select <img src="<?= $block->getViewFileUrl('Talypay_Taly::images/logo.svg');?>" class="talyicon">at checkout.</li>
           <li>Choose to split your payment into 4 or pay later in 30 days.</li>
           <li>You’ll be redirected to<a href=""> Taly.io</a>, create an account with just your phone number.</li>
           <li>Complete your first order. We´ll send SMS reminders before your next payment is due.</li>

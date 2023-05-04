@@ -1,5 +1,5 @@
 <?php
-namespace Taly\Taly\Model\Order;
+namespace Talypay\Taly\Model\Order;
 
 /**
  * Copyright © Magento, Inc. All rights reserved.

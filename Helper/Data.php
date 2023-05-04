@@ -1,5 +1,5 @@
 <?php
-namespace Taly\Taly\Helper;
+namespace Talypay\Taly\Helper;
 
 /**
  * Data
@@ -566,7 +566,7 @@ file_put_contents(BP.'/var/log/getdata.log', ' ::DATA:: '.print_r($paymentmode,t
     public function getImageFullPath()
     {
         $mediapath = $this->_filesystem->getDirectoryRead(DirectoryList::APP)->getAbsolutePath();
-        $modulePath =  $mediapath.'/Taly/Taly/view/frontend/web/images';
+        $modulePath =  $mediapath.'/Talypay/Taly/view/frontend/web/images';
         return $modulePath;
     }
 

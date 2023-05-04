@@ -1,6 +1,6 @@
 <?php
 
-namespace Taly\Taly\Webapi\Rest\Request\Deserializer;
+namespace Talypay\Taly\Webapi\Rest\Request\Deserializer;
 
 use Magento\Framework\App\State;
 use Magento\Framework\Phrase;
@@ -8,7 +8,7 @@ use Magento\Framework\Phrase;
 class WwwFormUrlencodedX implements \Magento\Framework\Webapi\Rest\Request\DeserializerInterface
 {
 
-    /** @var \Taly\Taly\Model\PostNotification\Decoder */
+    /** @var \Talypay\Taly\Model\PostNotification\Decoder */
     protected $_decoder;
 
     /**
@@ -17,10 +17,10 @@ class WwwFormUrlencodedX implements \Magento\Framework\Webapi\Rest\Request\Deser
     protected $_appState;
 
     /**
-     * @param \Taly\Taly\Model\PostNotification\Decoder $decoder
+     * @param \Talypay\Taly\Model\PostNotification\Decoder $decoder
      * @param \Magento\Framework\App\State $stateApp
      */
-    public function __construct(\Taly\Taly\Model\PostNotification\Decoder $decoder, State $stateApp)
+    public function __construct(\Talypay\Taly\Model\PostNotification\Decoder $decoder, State $stateApp)
     {
         $this->_decoder = $decoder;
         $this->_appState = $stateApp;

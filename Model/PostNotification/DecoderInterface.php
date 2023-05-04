@@ -1,5 +1,5 @@
 <?php
-namespace Taly\Taly\Model\PostNotification;
+namespace Talypay\Taly\Model\PostNotification;
 
 interface DecoderInterface
 {

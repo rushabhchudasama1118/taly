@@ -1,8 +1,8 @@
 <?php
-namespace Taly\Taly\Model;
+namespace Talypay\Taly\Model;
 
 use Magento\Checkout\Model\ConfigProviderInterface;
-use Taly\Taly\Helper\Data as zDataHelper;
+use Talypay\Taly\Helper\Data as zDataHelper;
 use Magento\Checkout\Model\Session as CheckoutSession;
 use Magento\Framework\HTTP\Client\Curl;
 use Magento\Framework\UrlInterface;
@@ -38,7 +38,7 @@ class CheckoutConfigProvider implements ConfigProviderInterface
         if ($this->_zDataHelper->getConfigData(zDataHelper::XML_MERCHANT_ACTIVE)) {
             $config = array_merge_recursive($config, [
                 'payment' => [
-                    \Taly\Taly\Model\PaymentMethod::CODE => [
+                    \Talypay\Taly\Model\PaymentMethod::CODE => [
                         'talypayAvailableService' => $this->gettalypayAvailableService(),
                         'talypayTCURL' => $this->_zDataHelper->getConfigData(zDataHelper::XML_TC_URL),
                         'talypayCallBackURL' => $this->_url->getBaseUrl() . 'talypay/Checkout/RedirectPage/',
@@ -49,7 +49,7 @@ class CheckoutConfigProvider implements ConfigProviderInterface
         } else {
             $config = array_merge_recursive($config, [
                 'payment' => [
-                    \Taly\Taly\Model\PaymentMethod::CODE => [
+                    \Talypay\Taly\Model\PaymentMethod::CODE => [
                         'talypayAvailableService' => "",
                         'talypayTCURL' => "",
                         'talypayCallBackURL' => $this->_url->getBaseUrl() . 'talypay/Checkout/RedirectPage/',

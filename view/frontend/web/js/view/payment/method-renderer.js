@@ -11,7 +11,7 @@ define(
         rendererList.push(
             {
                 type: 'taly',
-                component: 'Taly_Taly/js/view/payment/method-renderer/taly'
+                component: 'Talypay_Taly/js/view/payment/method-renderer/taly'
             }
         );
         return Component.extend({});

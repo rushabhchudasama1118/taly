@@ -23,7 +23,7 @@
                 </field>
                 <field id="list_mode" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                    <label>List Mode</label>        
-                   <source_model>Taly\Taly\Model\Config\Source\ListMode</source_model>
+                   <source_model>Talypay\Taly\Model\Config\Source\ListMode</source_model>
                 </field>
                 <field id="live_url" translate="label" type="text" showInDefault="30" showInWebsite="0" showInStore="0">
                     <label>Live URL</label>

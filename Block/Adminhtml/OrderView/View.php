@@ -1,10 +1,10 @@
 <?php
-namespace Taly\Taly\Block\Adminhtml\OrderView;
+namespace Talypay\Taly\Block\Adminhtml\OrderView;
 
 use Magento\Framework\Exception\InputException;
 use Magento\Framework\Exception\NoSuchEntityException;
-use Taly\Taly\Helper\Data as zDataHelper;
-use Taly\Taly\Model\PaymentMethod;
+use Talypay\Taly\Helper\Data as zDataHelper;
+use Talypay\Taly\Model\PaymentMethod;
 use \Magento\Backend\Block\Template\Context;
 use \Magento\Sales\Model\OrderRepository;
 

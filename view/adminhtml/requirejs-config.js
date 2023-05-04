@@ -1,6 +1,6 @@
 var config = {
     paths: {
-        'talypayJsConfig': 'Taly_Taly/js/talypayJsConfig'
+        'talypayJsConfig': 'Talypay_Taly/js/talypayJsConfig'
     },
     shim: {
         'talypayJsConfig': {

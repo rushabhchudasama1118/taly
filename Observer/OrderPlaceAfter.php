@@ -1,13 +1,13 @@
 <?php
-namespace Taly\Taly\Observer;
+namespace Talypay\Taly\Observer;
 
 use Magento\Checkout\Exception;
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
-use Taly\Taly\Helper\Data as zDataHelper;
-use Taly\Taly\Logger\Zlogger as LoggerInterface;
-use Taly\Taly\Model\PaymentMethod;
+use Talypay\Taly\Helper\Data as zDataHelper;
+use Talypay\Taly\Logger\Zlogger as LoggerInterface;
+use Talypay\Taly\Model\PaymentMethod;
 use Magento\Sales\Model\Order;
 
 class OrderPlaceAfter implements \Magento\Framework\Event\ObserverInterface

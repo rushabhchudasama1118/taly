@@ -8,16 +8,16 @@
 */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="Taly\Taly\Logger\Handler\Handler">
+    <type name="Talypay\Taly\Logger\Handler\Handler">
         <arguments>
             <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
         </arguments>
     </type>
-    <type name="Taly\Taly\Logger\Zlogger">
+    <type name="Talypay\Taly\Logger\Zlogger">
         <arguments>
             <argument name="name" xsi:type="string">talypay_logger</argument>
             <argument name="handlers"  xsi:type="array">
-                <item name="system" xsi:type="object">Taly\Taly\Logger\Handler\Handler</item>
+                <item name="system" xsi:type="object">Talypay\Taly\Logger\Handler\Handler</item>
             </argument>
         </arguments>
     </type>
@@ -27,7 +27,7 @@
             <argument name="deserializers" xsi:type="array">
                 <item name="application_x_www_form_urlencoded" xsi:type="array">
                     <item name="type" xsi:type="string">application/x-www-form-urlencoded</item>
-                    <item name="model" xsi:type="string">Taly\Taly\Webapi\Rest\Request\Deserializer\WwwFormUrlencodedX</item>
+                    <item name="model" xsi:type="string">Talypay\Taly\Webapi\Rest\Request\Deserializer\WwwFormUrlencodedX</item>
                 </item>
                 <item name="application_json" xsi:type="array">
                     <item name="type" xsi:type="string">application/json</item>

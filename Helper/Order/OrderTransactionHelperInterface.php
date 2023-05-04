@@ -1,5 +1,5 @@
 <?php
-namespace Taly\Taly\Helper\Order;
+namespace Talypay\Taly\Helper\Order;
 
 use Magento\Framework\Api\Filter;
 use Magento\Framework\Api\Search\SearchCriteria;
@@ -8,7 +8,7 @@ use Magento\Framework\Exception\InputException;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Sales\Api\Data\TransactionInterface;
 use Magento\Sales\Api\TransactionRepositoryInterface;
-use Taly\Taly\Logger\Zlogger as LoggerInterface;
+use Talypay\Taly\Logger\Zlogger as LoggerInterface;
 use Magento\Sales\Model\Order\Payment\Transaction\Repository;
 use Magento\Sales\Model\Order\Payment\Repository as PaymentResp;
 use Magento\Sales\Model\Order as OrderModel;

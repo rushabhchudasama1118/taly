@@ -1,5 +1,5 @@
 <?php
-namespace Taly\Taly\Observer;
+namespace Talypay\Taly\Observer;
 
 /**
 * @category    Taly
@@ -10,7 +10,7 @@ namespace Taly\Taly\Observer;
 
 use Magento\Framework\Encryption\EncryptorInterface;
 use Magento\Framework\Event\Observer as EventObserver;
-use Taly\Taly\Helper\Data as zDataHelper;
+use Talypay\Taly\Helper\Data as zDataHelper;
 
 class ConfigObserver implements \Magento\Framework\Event\ObserverInterface
 {
